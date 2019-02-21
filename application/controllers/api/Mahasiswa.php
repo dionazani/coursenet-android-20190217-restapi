@@ -21,9 +21,9 @@ class Mahasiswa extends REST_Controller {
     }
 
     public function index_post() {
-        $codeMahasiswa = $this->input->get('codeMahasiswa');
-        $namaMahasiswa = $this->input->get('namaMahasiswa');
-        $jurusanId = $this->input->get('jurusanId');
+        $codeMahasiswa = $this->post('codeMahasiswa');
+        $namaMahasiswa = $this->post('namaMahasiswa');
+        $jurusanId = 1;
 
         $result = $this->mahasiswa->insertMahasiswa($codeMahasiswa, $namaMahasiswa, $jurusanId);
 
